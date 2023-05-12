@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "30e54364-352b-40c8-9af7-5f4032c15746",
+		"name": "ESD Project - Washing Vendor Update API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23417940"
+	},
+	"item": [
+		{
+			"name": "Create washing vendor transaction - Success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"washer_id\": \"roylee\",\n   \"packaging_type\": \"small-bento\",\n   \"quantity\": 10\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5102/washing_vendor_update",
+					"host": [
+						"localhost"
+					],
+					"port": "5102",
+					"path": [
+						"washing_vendor_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create washing vendor transaction - Not Found",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"washer_id\": \"roylee\",\n   \"packaging_type\": \"huge-bento\",\n   \"quantity\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5102/washing_vendor_update",
+					"host": [
+						"localhost"
+					],
+					"port": "5102",
+					"path": [
+						"washing_vendor_update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

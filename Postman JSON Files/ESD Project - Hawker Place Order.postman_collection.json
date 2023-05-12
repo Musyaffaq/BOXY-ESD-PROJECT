@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "88cfd9a8-e16f-43bd-a7a6-d24fb1fc3c0f",
+		"name": "ESD Project - Hawker Place Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23253875"
+	},
+	"item": [
+		{
+			"name": "Place Order - Success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hawker_id\": \"stevejobs\",\n    \"cart_item\":[\n        {\n            \"packaging_type\": \"large-bento\",\n            \"quantity\": 100\n        },\n        {\n            \"packaging_type\": \"large-bowl\",\n            \"quantity\": 100\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5100/order",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order - Failed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hawker_id\": \"stevejobs\",\n    \"cart_item\":[\n        {\n            \"packaging_type\": \"small-bento\",\n            \"quantity\": 99999999\n        },\n        {\n            \"packaging_type\": \"large-bento\",\n            \"quantity\": 100000\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5100/order",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

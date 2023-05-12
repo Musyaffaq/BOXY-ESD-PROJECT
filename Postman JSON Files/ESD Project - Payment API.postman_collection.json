@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "2df6cd3b-d61d-4784-8b37-17b6bf2bb9d5",
+		"name": "ESD Project - Payment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23253875"
+	},
+	"item": [
+		{
+			"name": "Get all payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5004/payment",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment By Payment ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5004/payment/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"payment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment By Hawker ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5004/payment/hawker/stevejobs",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"payment",
+						"hawker",
+						"stevejobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"hawker_id\": \"stevejobs\",\r\n        \"order_id\": 1,\r\n        \"payment_amount\": 1.23\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5004/payment",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

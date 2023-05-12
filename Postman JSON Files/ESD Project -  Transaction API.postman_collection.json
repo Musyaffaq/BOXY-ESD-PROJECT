@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "b7886f9e-59a3-4e63-8951-2892133b1e2d",
+		"name": "ESD Project -  Transaction API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23253875"
+	},
+	"item": [
+		{
+			"name": "Get all washing batch transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find washing batch transaction by Batch ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/transaction/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"transaction",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find washing batch transaction by Washer ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/transaction/washer/tester1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"transaction",
+						"washer",
+						"tester1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create washing batch transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"washer_id\": \"jasonlee\",\n   \"packaging_type\": \"medium-bento\",\n  \"quantity\": 100\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
